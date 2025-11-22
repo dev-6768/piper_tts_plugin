@@ -24,6 +24,16 @@ By combining Flutter’s multi-platform flexibility with Piper’s ultra-fast TT
 
 **Usage**
 
+```bash
+dependencies:
+  piper_tts_plugin:
+    git:
+      url: https://github.com/dev-6768/piper_tts_plugin.git
+      ref: main
+```
+
+**Example App**
+
 ```dart
 //example app defined in ./example
 import 'dart:io';
