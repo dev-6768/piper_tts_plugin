@@ -1,0 +1,27 @@
+# output: lib/src/onnxruntime_bindings.dart
+# headers:
+#   entry-points:
+#     - D:/Sanidhya_Mishra/PDFly/piper_voice_models/onnxruntime-full/onnxruntime-full/include/onnxruntime/core/session/onnxruntime_c_api.h
+#   include-directories:
+#     - D:/Sanidhya_Mishra/PDFly/piper_voice_models/onnxruntime-full/onnxruntime-full/include
+# name: OnnxRuntimeBindings
+# description: FFI bindings for ONNX Runtime C API
+
+
+
+output: lib/src/onnxruntime_bindings.dart
+
+headers:
+  entry-points:
+    - D:/Sanidhya_Mishra/PDFly/piper_voice_models/onnxruntime-full/onnxruntime-full/include/onnxruntime/core/session/onnxruntime_c_api.h
+
+compiler-opts:
+  - "-ID:/Sanidhya_Mishra/PDFly/piper_voice_models/onnxruntime-full/onnxruntime-full/include"
+
+name: OnnxRuntimeBindings
+description: FFI bindings for ONNX Runtime C API
+
+llvm-path:
+  #- "D:/Sanidhya_Mishra/Android_Sdk/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/windows-x86_64/bin"
+  - "D:/Sanidhya_Mishra/PDFly/llvm"
+
