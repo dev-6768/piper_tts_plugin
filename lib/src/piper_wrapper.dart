@@ -4,6 +4,7 @@ import 'dart:convert';
 import 'dart:typed_data';
 import 'package:onnxruntime/onnxruntime.dart';
 import 'package:piper_phonemizer_plugin/piper_phonemizer_plugin.dart';
+import 'package:piper_phonemizer_windows_plugin/piper_phonemizer_windows_plugin.dart';
 import 'package:piper_tts_plugin/src/piper_logger.dart';
 import 'package:piper_tts_plugin/src/piper_model_config.dart';
 import 'package:piper_tts_plugin/enums/piper_voice_pack.dart';
@@ -16,7 +17,7 @@ class PiperTTS {
   OrtSession? _session;
   PiperModelConfig? _config;
   Completer<void>? _piperSetupCompleter;
-  PiperPhonemizerPlugin phonemizer = PiperPhonemizerPlugin();
+  dynamic phonemizer = Platform.isAndroid ? PiperPhonemizerPlugin() : PiperPhonemizerWindowsPlugin();
 
   bool get isLoaded => _session != null && _config != null;
 

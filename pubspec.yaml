@@ -17,6 +17,12 @@ dependencies:
     git:
       url: https://github.com/dev-6768/piper_phonemizer_plugin.git
       ref: dev-6768-v0.0.2 # or a specific branch, tag, or commit
+  
+  piper_phonemizer_windows_plugin:
+    git:
+      url: https://github.com/dev-6768/piper_phonemizer_windows_plugin.git
+      ref: main # or a specific branch, tag, or commit
+
   shared_preferences: ^2.5.3
   http: ^1.6.0
   path_provider: ^2.1.5
