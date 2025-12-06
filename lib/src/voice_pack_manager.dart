@@ -23,8 +23,7 @@ class PiperVoicePackManager {
 
       // fresh download
       final uuidGen = Uuid();
-      final uniqueId = uuidGen.v4();
-      uniqueId.replaceAll("-", "_");
+      final uniqueId = uuidGen.v4().replaceAll("-", "_");
 
       final modelPath =
           await _download(pack.modelUrl, "${pack.name}_piper_voice_model_${uniqueId}_model.onnx");
@@ -48,7 +47,7 @@ class PiperVoicePackManager {
     try {
       PiperLogger.instance.info("Please Wait, downloading $url...");
       final dir = await getApplicationSupportDirectory();
-      final file = File("${dir.path}/$fileName");
+      final file = File("${dir.path.replaceAll("\\", "/")}/$fileName");
 
       final response = await http.Client().get(Uri.parse(url));
       await file.writeAsBytes(response.bodyBytes);

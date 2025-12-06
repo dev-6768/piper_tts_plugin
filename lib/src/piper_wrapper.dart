@@ -30,26 +30,38 @@ class PiperTTS {
     required String modelPath,
     required String configPath,
   }) async {
-    if (!File(modelPath).existsSync()) {
-      throw Exception("Model not found: $modelPath");
+    try {
+      if (!File(modelPath).existsSync()) {
+        throw Exception("Model not found: $modelPath");
+      }
+      if (!File(configPath).existsSync()) {
+        throw Exception("Config not found: $configPath");
+      }
+
+      // Load model config
+      _config =
+          PiperModelConfig(jsonDecode(await File(configPath).readAsString()));
+
+      // Load ONNX model
+      _session = Platform.isAndroid 
+        ? OrtSession.fromFile(
+          File(modelPath),
+          OrtSessionOptions(),
+        )
+
+        : OrtSession.fromBuffer((await File(modelPath).readAsBytes()), OrtSessionOptions());
+
+      
+
+      await setupPhonemizer();
+
+      PiperLogger.instance.debug("Piper model + config + eSpeak loaded.");
     }
-    if (!File(configPath).existsSync()) {
-      throw Exception("Config not found: $configPath");
+
+    catch(err) {
+      PiperLogger.instance.debug("Some error occured : $err");
     }
-
-    // Load model config
-    _config =
-        PiperModelConfig(jsonDecode(await File(configPath).readAsString()));
-
-    // Load ONNX model
-    _session = OrtSession.fromFile(
-      File(modelPath),
-      OrtSessionOptions(),
-    );
-
-    await setupPhonemizer();
-
-    PiperLogger.instance.debug("Piper model + config + eSpeak loaded.");
+    
   }
 
   Future<void> setupPhonemizer() async {
