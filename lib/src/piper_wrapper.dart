@@ -17,7 +17,9 @@ class PiperTTS {
   OrtSession? _session;
   PiperModelConfig? _config;
   Completer<void>? _piperSetupCompleter;
-  dynamic phonemizer = Platform.isAndroid ? PiperPhonemizerPlugin() : PiperPhonemizerWindowsPlugin();
+  dynamic phonemizer = Platform.isAndroid 
+    ? PiperPhonemizerPlugin() 
+    : PiperPhonemizerWindowsPlugin();
 
   bool get isLoaded => _session != null && _config != null;
 
