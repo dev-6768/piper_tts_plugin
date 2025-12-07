@@ -19,7 +19,7 @@ The goal is to enable Flutter developers to build:
 
 By combining Flutter’s multi-platform flexibility with Piper’s ultra-fast TTS engine, this plugin aims to make high-quality, real-time voice synthesis available to every app — without the cost or limitations of cloud TTS providers.
 
-> **Note:** This plugin currently supports **Android devices only**.  
+> **Note:** This plugin currently supports **Android and MS Windows devices only**.  
 > **iOS support will be added in future releases.**
 
 **Usage**
