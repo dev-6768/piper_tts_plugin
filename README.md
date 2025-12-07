@@ -29,7 +29,7 @@ dependencies:
   piper_tts_plugin:
     git:
       url: https://github.com/dev-6768/piper_tts_plugin.git
-      ref: dev-6768-v0.0.2
+      ref: dev-6768-v0.0.3
 ```
 
 **Example App**
