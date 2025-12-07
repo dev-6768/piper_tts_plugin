@@ -235,7 +235,7 @@ class _PiperHomePageState extends State<PiperHomePage> {
 
 Links to the phonemizer libraries for Android and MS Windows platforms :
 
-Android : https://github.com/dev-6768/piper_phonemizer_plugin
-Windows : https://github.com/dev-6768/piper_phonemizer_windows_plugin
+- Android : https://github.com/dev-6768/piper_phonemizer_plugin
+- Windows : https://github.com/dev-6768/piper_phonemizer_windows_plugin
 
 
