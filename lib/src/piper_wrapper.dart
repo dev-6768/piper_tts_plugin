@@ -191,7 +191,7 @@ class PiperTTS {
     final pcm = await synthesizePcm(ids);
 
     final wav = _pcmToWav(pcm, 22050);
-    final file = File(path);
+    final file = File(path.replaceAll("\\", "/"));
     await file.writeAsBytes(wav);
 
     return file;

@@ -78,7 +78,7 @@ class _PiperHomePageState extends State<PiperHomePage> {
 
     try {
       final dir = await getTemporaryDirectory();
-      final out = File("${dir.path.replaceAll("\\", "/")}/piper_output.wav");
+      final out = File("${dir.path}/piper_output.wav");
 
       final file = await _tts.synthesizeToFile(
         text: _textController.text.trim(),
