@@ -1,3 +1,3 @@
-## 0.0.1
+## 0.0.2
 
-* TODO: Describe initial release.
+* A Flutter plugin for Piper TTS, enabling fast, high-quality offline speech synthesis. Compatible with MS Windows and Android platform.
