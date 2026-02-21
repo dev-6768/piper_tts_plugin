@@ -314,20 +314,18 @@ packages:
   piper_phonemizer_plugin:
     dependency: transitive
     description:
-      path: "."
-      ref: "dev-6768-v0.0.2"
-      resolved-ref: "3c94e2b8e10c094c1f21caf28f3733165845d445"
-      url: "https://github.com/dev-6768/piper_phonemizer_plugin.git"
-    source: git
-    version: "0.0.1"
+      name: piper_phonemizer_plugin
+      sha256: "082a3561ca8ac93fb042702ffbcc55ee92ee2854b67de554aa5eac35b980bcc9"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.2"
   piper_phonemizer_windows_plugin:
     dependency: transitive
     description:
-      path: "."
-      ref: main
-      resolved-ref: "3f0f87d933b94da0206a6accb7035252a8d9886f"
-      url: "https://github.com/dev-6768/piper_phonemizer_windows_plugin.git"
-    source: git
+      name: piper_phonemizer_windows_plugin
+      sha256: "61153b0bd7bd1e5dee8667adcdf97d96a927614bbd1abe8713a0ab3831ba9861"
+      url: "https://pub.dev"
+    source: hosted
     version: "0.0.1"
   piper_tts_plugin:
     dependency: "direct main"
