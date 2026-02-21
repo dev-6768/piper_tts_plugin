@@ -1,8 +1,13 @@
 name: piper_tts_plugin
-description: "A new Flutter plugin project."
+description: "A Flutter plugin for Piper TTS, enabling fast, high-quality offline speech synthesis."
 version: 0.0.1
-publish_to: none
-homepage:
+
+homepage: https://github.com/dev-6768/piper_tts_plugin
+repository: https://github.com/dev-6768/piper_tts_plugin
+issue_tracker: https://github.com/dev-6768/piper_tts_plugin/issues
+
+#publish_to: none
+#homepage:
 
 environment:
   sdk: ^3.10.0
