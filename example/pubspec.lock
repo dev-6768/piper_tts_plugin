@@ -320,6 +320,15 @@ packages:
       url: "https://github.com/dev-6768/piper_phonemizer_plugin.git"
     source: git
     version: "0.0.1"
+  piper_phonemizer_windows_plugin:
+    dependency: transitive
+    description:
+      path: "."
+      ref: main
+      resolved-ref: "3f0f87d933b94da0206a6accb7035252a8d9886f"
+      url: "https://github.com/dev-6768/piper_phonemizer_windows_plugin.git"
+    source: git
+    version: "0.0.1"
   piper_tts_plugin:
     dependency: "direct main"
     description:
